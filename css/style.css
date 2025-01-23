@@ -1,0 +1,43 @@
+.nav-link {
+    position: relative;
+    padding-right: 20px; /* Add some space to avoid the border overlapping the text */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: #ccc; /* Change to your preferred color */
+}
+
+.nav-link:last-child::after {
+    content: none; /* Remove the divider after the last link */
+}
+
+.custom-border {
+    border-width: 8px;
+    border-color: #3b82f6; /* border-blue-500 */
+    animation: borderColorChange 10s infinite;
+  }
+
+  @keyframes borderColorChange {
+    0% {
+      border-color: #3bf66a; /* border-blue-500 */
+    }
+    25% {
+      border-color: #6b7280; /* border-gray-500 */
+    }
+    50% {
+      border-color: #fb923c; /* border-orange-500 */
+    }
+    75% {
+        border-color: #6b7280; /* border-gray-500 */
+    }
+    100% {
+      border-color: #3bf66a; /* border-blue-500 */
+    }
+  }
